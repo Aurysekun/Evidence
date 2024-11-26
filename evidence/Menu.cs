@@ -8,26 +8,26 @@ namespace evidence
 {
     public class Menu
     {
-        public static void StartMenu(Knihovna knihovna)
+        public static void StartMenu(Knihovna knihovna) 
         {
 
             Menu.moznost();
             
-            string moznost = Console.ReadLine();
+            string moznost = Console.ReadLine(); //Vypsání menu
 
             switch (moznost)
             {
-                case "1":
+                case "1": //Přidání klienta
                     knihovna.PridatPojistence();
                     break;
                 
-                case "2":
+                case "2": //Seznam klientů
                     knihovna.SeznamPojistenych();
                     break;
-                case "3":
+                case "3": //Vyhledání klientů
                     knihovna.vyhledat();
                     break;
-                case "4":
+                case "4": //Ukončení programu
                     Environment.Exit(0);
                     break;
             }

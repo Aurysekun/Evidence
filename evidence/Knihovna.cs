@@ -8,9 +8,9 @@ namespace evidence
 {
     public class Knihovna
     {
-        private List<Pojistenci> vSeznamu = new List<Pojistenci>();
+        private List<Pojistenci> vSeznamu = new List<Pojistenci>(); //Uchování klientů co jsou pojištěni
 
-        public void PridatPojistence()
+        public void PridatPojistence() //Přidání klienta
         {
             Console.WriteLine();
 
@@ -32,21 +32,22 @@ namespace evidence
             Console.WriteLine("Zadejte věk:");
             int vek = int.Parse(Console.ReadLine());
 
-            Pojistenci clovek = new Pojistenci(jmeno, prijmeni, telefonniCislo, vek);
+            Pojistenci clovek = new Pojistenci(jmeno, prijmeni, telefonniCislo, vek); //Přidání klienta
             vSeznamu.Add( clovek );
-            Console.WriteLine("Data byla uložená. Pokračujte libovolnou klávesou...");
+            
+            Console.WriteLine("Data byla uložená. Pokračujte libovolnou klávesou..."); //Úspěšné uložení
             Console.ReadKey();
 
-            Menu.StartMenu(this);
+            Menu.StartMenu(this); //Návrat do menu
 
             
         }
 
-        public void SeznamPojistenych()
+        public void SeznamPojistenych() //Zobrazení seznamu
         {
             Console.WriteLine();
 
-            if (vSeznamu.Count == 0)
+            if (vSeznamu.Count == 0) //Kontrola seznamu
             {
                 Console.WriteLine("Žádní pojištěnci.");
             }
@@ -55,7 +56,7 @@ namespace evidence
                 Console.WriteLine("Seznam pojištěnců:");
             }
 
-            foreach (var clovek in vSeznamu)
+            foreach (var clovek in vSeznamu) //Výpis seznamu
             {
                 Console.WriteLine("Jméno: " + clovek.Jmeno);
 
@@ -68,7 +69,7 @@ namespace evidence
             Menu.StartMenu(this);
         }
 
-        public void vyhledat()
+        public void vyhledat() //Vyhledání pojištěných klientů
         {
             Console.WriteLine();
 

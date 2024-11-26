@@ -8,12 +8,12 @@ namespace evidence
 {
     public class Pojistenci
     {
-        public string Jmeno {  get; set; }
-        public string Prijmeni { get; set; }
-        public int TelefonniCislo { get; set; }
-        public int Vek {  get; set; }
+        public string Jmeno {  get; set; } //Uchování jména
+        public string Prijmeni { get; set; } //Uchování příjmení
+        public int TelefonniCislo { get; set; } //Uchování tel. čísla
+        public int Vek {  get; set; } //Uchování věku
 
-        public Pojistenci(string jmeno, string prijmeni, int telefonniCislo, int vek)
+        public Pojistenci(string jmeno, string prijmeni, int telefonniCislo, int vek) //Kontruktor pro vytvoření třídy
         {
             Jmeno = jmeno;
             Prijmeni = prijmeni;
