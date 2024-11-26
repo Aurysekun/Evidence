@@ -21,7 +21,7 @@ namespace evidence
             }
 
             string prijmeni = "";
-            while (string.IsNullOrEmpty(prijmeni))//xddddd
+            while (string.IsNullOrEmpty(prijmeni))
             {
                 Console.WriteLine("Zadejte příjmení:");
                 prijmeni = Console.ReadLine();
